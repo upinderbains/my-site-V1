@@ -1,0 +1,26 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 40px);
+}
+
+.subtitle {
+  margin-bottom: 5rem;
+  font-size: var(--fs-h3);
+  display: block;
+}
+.button {
+  font-size: var(--fs-h3);
+  padding: 1em;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid var(--clr-accent);
+}
+
+.button:hover {
+  background: var(--clr-accent);
+  transition: all 0.3s;
+}

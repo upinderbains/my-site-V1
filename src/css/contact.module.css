@@ -1,0 +1,27 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.title {
+}
+
+.text {
+  margin: 2rem;
+  font-size: var(--fs-body);
+  max-width: 50rem;
+}
+
+.button {
+  margin-top: 5rem;
+  font-size: var(--fs-body);
+  padding: 1em;
+  border-radius: 3px;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}

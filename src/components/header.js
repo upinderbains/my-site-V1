@@ -1,42 +1,48 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
+import styles from '../css/header.module.css';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = () => {
+  const [open, setOpen] = useState(false);
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+  return (
+    <header>
+      <nav className={`${styles.nav} ${open ? styles.navActive : ''}`}>
+        <ul className={styles.navList}>
+          <li className={styles.navItem}>
+            <Link to='/' className={styles.navLink}>
+              Home
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to='/#projects' className={styles.navLink}>
+              Projects
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to='/#contact' className={styles.navLink}>
+              Contact
+            </Link>
+          </li>
+          <li className={styles.navItem}>
+            <Link to='/resume' className={styles.navLink}>
+              Resume
+            </Link>
+          </li>
+        </ul>
+        <div onClick={() => setOpen(!open)} className={styles.btn}>
+          <div
+            className={`${styles.btnLine} ${open ? styles.btnTop : ''}`}
+          ></div>
+          <div
+            className={`${styles.btnLine} ${open ? styles.btnMiddle : ''}`}
+          ></div>
+          <div
+            className={`${styles.btnLine} ${open ? styles.btnBottom : ''}`}
+          ></div>
+        </div>
+      </nav>
+    </header>
+  );
+};
+export default Header;
