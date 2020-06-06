@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { sizes } from './constants';
+//styles
 
 const Button = styled.button`
   font-size: ${(props) => (props.font ? sizes[props.font] : 1.8)}rem;
