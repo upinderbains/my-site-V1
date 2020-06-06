@@ -4,14 +4,12 @@ const GlobalStyles = createGlobalStyle`
 
 :root {
 
-    --color-darkNavy: '#020c1b';
-    --color-navy: '#0a192f';
-    --color-white: '#dce7ff';
-    --color-yellow: '#FFC464';
-    --color-grey: '#4c5772';
-    --color-orange: '#FF9E64';
-    --color-red: red;
-    --color-blue: blue;
+    --color-darkNavy: #020c1b;
+    --color-navy: #0a192f;
+    --color-white: #dce7ff;
+    --color-yellow: #FFC464;
+    --color-grey: #4c5772;
+    --color-orange: #FF9E64;
 
 
 --ff-primary: 'Nunito', 'sans-serif';
