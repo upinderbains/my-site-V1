@@ -1,16 +1,28 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Contact from '../components/Contact';
 
-import GlobalStyles from '../styles/GlobalStyles';
-
-const IndexPage = () => (
-  <>
-    <GlobalStyles />
-    <Helmet>
-      <meta charSet='utf-8' />
-      <title>Upinder Bains | Software Developer</title>
-    </Helmet>
-  </>
+const IndexPage = ({ data }) => (
+  <Layout>
+    <Contact data={data.contact.edges} />
+  </Layout>
 );
 
+export const query = graphql`
+  {
+    contact: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/contact/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            buttonText
+            title
+          }
+        }
+      }
+    }
+  }
+`;
 export default IndexPage;

@@ -3,14 +3,12 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
 
 :root {
-
     --color-darkNavy: #020c1b;
     --color-navy: #0a192f;
     --color-white: #dce7ff;
     --color-yellow: #FFC464;
     --color-grey: #4c5772;
     --color-orange: #FF9E64;
-
 
 --ff-primary: 'Nunito', 'sans-serif';
  --ff-secondary: 'Josefin Sans', 'sans-serif';
@@ -75,14 +73,13 @@ a{
 button{
     cursor: pointer;
     border: 0;
-    border-radius: 5px;
-    color: var(--color-orange);
+    outline: none;
 }
 
 ul{
     list-style: none;
     li {
-
+        cursor: pointer;
     }
 }
 
