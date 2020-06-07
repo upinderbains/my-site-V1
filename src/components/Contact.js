@@ -21,20 +21,23 @@ const Contact = ({ data }) => {
   return (
     <Container>
       <Title>{title}</Title>
-      <form name='contact' action='/success' method='POST' data-netlify='true'>
-      <input type="hidden" name="contact" value="Contact Form" />
+      <form
+        method='post'
+        netlify-honeypot='bot-field'
+        data-netlify='true'
+        name='contact'
+      >
+        <input type='hidden' name='bot-field' />
+        <input type='hidden' name='contact' value='contact' />
         <label>
           Your Name: <input type='text' name='name' />
         </label>
-
         <label>
           Your Email: <input type='email' name='email' />
         </label>
-
         <label>
           Message: <textarea name='message'></textarea>
         </label>
-
         <Button type='submit'>{buttonText}</Button>
       </form>
     </Container>
