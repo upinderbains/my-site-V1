@@ -20,6 +20,7 @@ const GlobalStyles = createGlobalStyle`
   --fs-xxl: 2.2rem;
   --fs-h3: 3.2rem;
   --fs-h2: 3.5rem;
+  --fs-h1: 4rem;
 
 }
 

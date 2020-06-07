@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { email } from '../config';
 import mixins from '../styles/mixins';
+import Section from '../styles/Section';
 
-const Container = styled.div`
+const Container = styled(Section)`
   text-align: center;
+  min-height: 500px;
 `;
 const Title = styled.h1`
   font-size: var(--fs-h2);
