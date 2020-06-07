@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { email } from '../config';
 import mixins from '../styles/mixins';
 import Section from '../styles/Section';
 
@@ -12,7 +11,7 @@ const Title = styled.h1`
   font-size: var(--fs-h2);
 `;
 
-const EmailLink = styled.a`
+const Button = styled.button`
   ${mixins.button}
 `;
 
@@ -22,13 +21,21 @@ const Contact = ({ data }) => {
   return (
     <Container>
       <Title>{title}</Title>
-      <EmailLink
-        href={`mailto:${email}`}
-        target='_blank'
-        rel='nofollow noopener noreferrer'
-      >
-        {buttonText}
-      </EmailLink>
+      <form name='contact' method='POST' data-netlify='true'>
+        <label>
+          Your Name: <input type='text' name='name' />
+        </label>
+
+        <label>
+          Your Email: <input type='email' name='email' />
+        </label>
+
+        <label>
+          Message: <textarea name='message'></textarea>
+        </label>
+
+        <Button type='submit'>{buttonText}</Button>
+      </form>
     </Container>
   );
 };
