@@ -28,7 +28,7 @@ const Contact = ({ data }) => {
         name='contact'
       >
         <input type='hidden' name='bot-field' />
-        <input type='hidden' name='contact' value='contact' />
+        <input type='hidden' name='form-name' value='contact' />
         <label>
           Your Name: <input type='text' name='name' />
         </label>
