@@ -21,7 +21,8 @@ const Contact = ({ data }) => {
   return (
     <Container>
       <Title>{title}</Title>
-      <form name='contact' method='POST' data-netlify='true'>
+      <form name='contact' action='/success' method='POST' data-netlify='true'>
+      <input type="hidden" name="contact" value="Contact Form" />
         <label>
           Your Name: <input type='text' name='name' />
         </label>
