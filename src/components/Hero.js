@@ -14,9 +14,11 @@ const StyledContainer = styled(Section)`
 const Title = styled.h2`
   font-size: var(--fs-h1);
   line-height: 1.2;
+  color: var(--color-white);
 `;
 
 const Subtitle = styled.h3`
+  color: var(--color-grey);
 `;
 
 const StyledButton = styled.div`

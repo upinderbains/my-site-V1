@@ -39,15 +39,17 @@ font-size: 62.5%;
 
 body{
     font-family: var(--ff-primary);
-    color: var(--color-darkNavy);
     font-weight: 600;
     line-height: 1.6;
     font-size: var(--fs-lg);
+    background-color: var(--color-darkNavy);
 }
 
 h1,h2,h3 {
     font-weight: 600;
-    color: var(--color-navy);
+}
+p{
+    color: var(--color-white);
 }
 
 img{

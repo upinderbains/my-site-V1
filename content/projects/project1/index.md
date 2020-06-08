@@ -1,13 +1,17 @@
 ---
-date: '2017-11-01'
-title: 'Apple Music Facebook Messenger Integration'
-github: ''
-external: 'https://www.theverge.com/2017/10/5/16433770/facebook-messenger-apple-music-bot-song-streaming'
+date: '1'
+title: 'Project 1'
+cover: './tour-1.jpeg'
+github: 'https://github.com/bchiang7/halcyon-site'
+external: 'https://halcyon-theme.netlify.com/'
 tech:
-  - Ember
-  - JS
-  - SCSS
-company: 'Apple'
+  - VS Code
+  - Sublime Text
+  - Atom
+  - iTerm2
+  - Hyper
 ---
 
-Facebook Messenger chat bot extension featuring authentication and full song streaming from within the Messenger app. Read more about it on [The Verge](https://www.theverge.com/2017/10/5/16433770/facebook-messenger-apple-music-bot-song-streaming).
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, earum
+reiciendis nam non sunt enim iusto, asperiores suscipit provident
+doloribus autem id ab facere, velit odit ipsum harum nostrum quisquam.

@@ -8,7 +8,7 @@ import Hero from '../components/Hero';
 const IndexPage = ({ data }) => (
   <Layout>
     <Hero data={data.hero.edges} />
-    <Projects />
+    <Projects data={data.projects.edges} />
     <Contact data={data.contact.edges} />
   </Layout>
 );
@@ -35,6 +35,29 @@ export const query = graphql`
             title
             subTitle
           }
+        }
+      }
+    }
+    projects: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/projects/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+            external
+            github
+            tech
+            cover {
+              childImageSharp {
+                fluid(maxWidth: 900, quality: 90) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+          html
         }
       }
     }

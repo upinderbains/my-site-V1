@@ -12,10 +12,6 @@ module.exports = {
       name: 'Contact',
       url: '/#contact'
     },
-    {
-      name: 'Resume',
-      url: '/#contact'
-    }
   ],
   email: 'usbains@uwaterloo.ca'
 };

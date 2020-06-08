@@ -1,14 +1,16 @@
 ---
 date: '2016-03-01'
-title: 'Personal Website V1'
+title: 'Project 3'
 github: 'https://github.com/bchiang7/v1'
 external: 'https://bchiang7.github.io/v1/'
+cover: './tour-9.jpeg'
 tech:
   - HTML
   - CSS
   - JS
   - Bootstrap
-showInProjects: true
 ---
 
-My first portfolio website I designed and built in 2014. I learned quite a bit about HTML, CSS, and SEO. Since then, I think my web development and design skills have improved immensely.
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, earum
+reiciendis nam non sunt enim iusto, asperiores suscipit provident
+doloribus autem id ab facere, velit odit ipsum harum nostrum quisquam.

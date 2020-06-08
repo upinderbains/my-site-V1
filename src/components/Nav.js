@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const Container = styled.nav`
   height: 100px;
-  background-color: red;
+  background-color: var(--color-navy);
 `;
 
 const List = styled.ul`
@@ -19,7 +19,9 @@ const ListItem = styled.li`
 `;
 const ListLink = styled(Link)`
   font-size: var(--fs-lg);
+  color: var(--color-white);
 `;
+const ResumeLink = styled.a``;
 
 const Nav = () => {
   return (
@@ -30,6 +32,15 @@ const Nav = () => {
             <ListLink to={url}>{name}</ListLink>
           </ListItem>
         ))}
+        <ListItem>
+          <ResumeLink
+            href='/resume.pdf'
+            target='_blank'
+            rel='nofollow noopener noreferrer'
+          >
+            Resume
+          </ResumeLink>
+        </ListItem>
       </List>
     </Container>
   );

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import mixins from '../styles/mixins';
 
 const Container = styled.footer`
-  background-color: blue;
+  background-color: var(--color-navy);
   height: 100px;
   margin-top: auto;
   ${mixins.flexCenter};
