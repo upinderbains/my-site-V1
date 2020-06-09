@@ -14,21 +14,70 @@ const Form = styled.form`
 `;
 
 const baseInputCss = css`
-  width: 600px;
+  width: 100%;
   background: transparent;
   border: none;
   outline: none;
   border-bottom: 1px solid gray;
   color: #fff;
   font-size: 18px;
-  margin-bottom: 30px;
+  position: relative;
+  letter-spacing: 1px;
+`;
+const baseAnimationCss = css`
+  &:focus,
+  &:valid {
+    border-bottom: 1px solid white;
+  }
+  &:invalid {
+    border-bottom: 1px solid gray;
+  }
+  &:focus ~ span,
+  &:valid ~ span,
+  &:focus:invalid ~ span {
+    transform: translateY(-25px);
+  }
+  &:focus:valid ~ span {
+    color: #fff;
+  }
+`;
+const InputContainer = styled.div`
+  position: relative;
+  width: 500px;
+  margin-bottom: 60px;
+  :last-of-type {
+    margin-bottom: 0px;
+  }
+
+  input {
+    height: 40px;
+  }
 `;
 const Input = styled.input`
   ${baseInputCss}
+  &:-webkit-autofill,
+&:-webkit-autofill:hover, 
+&:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-darkNavy) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  ${baseAnimationCss};
 `;
 
+const StyledSpan = styled.span`
+  position: absolute;
+  left: 0;
+  color: gray;
+  font-size: 1.6rem;
+  display: inline-block;
+  transition: all 0.3s;
+  pointer-events: none;
+`;
 const TextArea = styled.textarea`
-  ${baseInputCss}
+  ${baseInputCss};
+  ${baseAnimationCss};
 `;
 const Title = styled.h1`
   font-size: var(--fs-h2);
@@ -54,19 +103,20 @@ const Contact = ({ data }) => {
       >
         <Input type='hidden' name='bot-field' />
         <Input type='hidden' name='form-name' value='contact' />
-        <Input type='text' name='name' placeholder='Enter Your Name' required />
-        <Input
-          type='email'
-          name='email'
-          placeholder='Enter Your Email'
-          required
-        />
-        <TextArea
-          name='message'
-          placeholder='Message'
-          rows='4'
-          required
-        ></TextArea>
+        <InputContainer>
+          <Input type='text' name='name' autocomplete='off' required />
+          <StyledSpan>Name</StyledSpan>
+        </InputContainer>
+        <InputContainer>
+          <Input type='email' name='email' autocomplete='off' required />
+          <StyledSpan>Email</StyledSpan>
+        </InputContainer>
+
+        <InputContainer>
+          <TextArea name='message' rows='4' required></TextArea>
+          <StyledSpan>Message</StyledSpan>
+        </InputContainer>
+
         <Button type='submit'>{buttonText}</Button>
       </Form>
     </Container>
