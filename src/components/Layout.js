@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet';
 import GlobalStyles from '../styles/GlobalStyles';
 import Footer from './Footer';
 import Nav from './Nav';
-import mixins from '../styles/mixins';
 
 const Container = styled.div`
   min-height: 100vh;

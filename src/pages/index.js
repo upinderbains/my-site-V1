@@ -5,14 +5,16 @@ import Contact from '../components/Contact';
 import Projects from '../components/Projects';
 import Hero from '../components/Hero';
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <Hero data={data.hero.edges} />
-    <Projects data={data.projects.edges} />
-    <Contact data={data.contact.edges} />
-  </Layout>
-);
-
+const IndexPage = ({ data }) => {
+  console.log(data);
+  return (
+    <Layout>
+      <Hero data={data.hero.edges} />
+      <Projects data={data.projects.edges} />
+      <Contact data={data.contact.edges} />
+    </Layout>
+  );
+};
 export const query = graphql`
   {
     contact: allMarkdownRemark(

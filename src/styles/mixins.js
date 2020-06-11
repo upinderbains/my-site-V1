@@ -3,7 +3,6 @@ import { css } from 'styled-components';
 const mixins = {
   flexCenter: css`
     display: flex;
-    align-items: center;
   `,
 
   flexBetween: css`

@@ -2,11 +2,10 @@ import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Section from '../styles/Section';
-import mixins from '../styles/mixins';
 import Title from '../styles/Title';
 
 const Wrapper = styled.div`
-  min-height: 1000px;
+  margin-top: 100px;
 `;
 const StyledContainer = styled(Section)`
   display: flex;
