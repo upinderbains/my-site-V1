@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Section from '../styles/Section';
 import Title from '../styles/Title';
 
+
 const Wrapper = styled.div`
   margin-top: 100px;
 `;
@@ -11,6 +12,7 @@ const StyledContainer = styled(Section)`
   display: flex;
   flex-direction: column;
   align-items: center;
+
 `;
 const Heading = styled.div`
   text-align: center;

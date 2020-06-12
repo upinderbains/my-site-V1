@@ -3,9 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { navLinks } from '../config';
 
-const Container = styled.div`
-  
-`;
+const Container = styled.div``;
 
 const StyledHam = styled.div`
   width: 4rem;
@@ -26,7 +24,7 @@ const StyledHam = styled.div`
   div {
     width: 100%;
     height: 0.4rem;
-    background-color: var(--color-orange);
+    background-color: var(--color-coral);
     border-radius: 20px;
     transform-origin: 1px;
     transition: all 0.2s linear;
@@ -54,10 +52,11 @@ const List = styled.ul`
   align-items: center;
   flex-flow: column;
   padding-top: 10rem;
-  background-color: var(--color-navy);
+  background-color: var(--color-navy-light);
   transition: all 0.3s;
   transform: ${props => (props.show ? 'translateX(0)' : 'translateX(100vw)')};
   display: none;
+  z-index: 20;
 
   @media (max-width: 768px) {
     display: flex;
@@ -69,17 +68,24 @@ const ListItem = styled.li`
 const ListLink = styled(Link)`
   font-size: var(--fs-xl);
   color: var(--color-white);
+  transition: all 0.3s;
+  &:hover {
+    color: var(--color-coral);
+  }
 `;
 const ResumeLink = styled.a`
   font-size: var(--fs-xl);
   color: var(--color-white);
+  transition: all 0.3s;
+  &:hover {
+    color: var(--color-coral);
+  }
 `;
 
 const Ham = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      
       <List show={open}>
         {navLinks.map(({ name, url }, index) => (
           <ListItem key={index}>

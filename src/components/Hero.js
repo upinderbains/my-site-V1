@@ -2,34 +2,48 @@ import React from 'react';
 import styled from 'styled-components';
 import Section from '../styles/Section';
 import Button from './Button';
-import mixins from '../styles/mixins';
-import Logo from '../images/waves.svg';
+import Logo from '../images/blob.svg';
 
 const StyledContainer = styled(Section)`
-  min-height: calc(100vh - 70px);
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(${Logo});
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: bottom;
+  margin-top: -50px;
 `;
+
 const Wrapper = styled.div`
-  ${mixins.flexCenter};
+  width: 100%;
+  height: 70%;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -10rem;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  background-image: url(${Logo});
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+
+  @media (max-width: 600px) {
+    background-size: 95%;
+
+  }
 `;
 
 const Title = styled.h2`
   font-size: var(--fs-h1);
   line-height: 1.2;
-  color: var(--color-white);
+  color: var(--color-navy);
+  pointer-events: none;
 `;
 
 const Subtitle = styled.h3`
   color: var(--color-grey);
+  color: var(--color-pink);
+  pointer-events: none;
 `;
 
 const StyledButton = styled.div`

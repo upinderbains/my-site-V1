@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import GlobalStyles from '../styles/GlobalStyles';
 import Footer from './Footer';
-import Nav from './Nav';
+import Landing from './Landing';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -11,7 +11,7 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children}) => {
   return (
     <Container>
       <GlobalStyles />
@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
         <meta charSet='utf-8' />
         <title>Upinder Bains | Software Developer</title>
       </Helmet>
-      <Nav />
       {children}
       <Footer />
     </Container>

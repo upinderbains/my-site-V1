@@ -4,11 +4,16 @@ const GlobalStyles = createGlobalStyle`
 
 :root {
     --color-darkNavy: #020c1b;
-    --color-navy: #0a192f;
-    --color-white: #dce7ff;
-    --color-yellow: #FFC464;
-    --color-grey: #4c5772;
-    --color-orange: #FF9E64;
+    --color-navy: #0B3C5D;
+    --color-navy-light: rgba(11,60,93,0.8);
+    --color-white: #ffffff;
+    --color-pink: #EC576B;
+    --color-coral: #E14658;
+    --color-coral-light: rgba(225,70,88, 0.2);
+    --color-coral-dark: rgba(225,70,88, 0.3);
+    --color-blue-light: #e3f1fc;
+
+
 
 --ff-primary: 'Nunito', 'sans-serif';
  --ff-secondary: 'Josefin Sans', 'sans-serif';
@@ -42,7 +47,7 @@ body{
     font-weight: 600;
     line-height: 1.6;
     font-size: var(--fs-lg);
-    background-color: var(--color-darkNavy);
+    background-color: var(--color-white);
 }
 
 h1,h2,h3 {
@@ -66,11 +71,6 @@ svg{
 a{
     text-decoration: none;
     cursor: pointer;
-
-    &:hover,
-    &:focus {
-        color: var(--color-orange);
-    }
 }
 
 button{

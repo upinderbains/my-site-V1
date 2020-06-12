@@ -7,8 +7,6 @@ import { navLinks } from '../config';
 
 const Container = styled.nav`
   ${mixins.flexCenter};
-  margin-left: auto;
-  height: 8vh;
   width: 100%;
   justify-content: flex-end;
 `;
@@ -28,11 +26,22 @@ const ListItem = styled.li`
 `;
 const ListLink = styled(Link)`
   font-size: var(--fs-xl);
-  color: var(--color-white);
+  color: var(--color-navy);
+  transition: all .3s;
+  &:hover {
+    color: var(--color-coral);
+  }
 `;
 const ResumeLink = styled.a`
   font-size: var(--fs-xl);
   color: var(--color-white);
+  background-color: var(--color-pink);
+  padding: 0.3em 1em;
+  border-radius: 50px;
+  transition: all .3s;
+  &:hover {
+    background-color: var(--color-coral);
+  }
 `;
 
 const Nav = () => {

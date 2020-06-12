@@ -3,13 +3,12 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Contact from '../components/Contact';
 import Projects from '../components/Projects';
-import Hero from '../components/Hero';
+import Landing from '../components/Landing';
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   return (
     <Layout>
-      <Hero data={data.hero.edges} />
+      <Landing data={data.hero.edges} />
       <Projects data={data.projects.edges} />
       <Contact data={data.contact.edges} />
     </Layout>
